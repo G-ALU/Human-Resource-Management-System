@@ -1,0 +1,46 @@
+<div class="dashboard-layout">
+  <div class="main-content">
+    <app-navbar3></app-navbar3>
+    <div class="card-container">
+      <table class="event-table">
+        <thead>
+          <tr>
+            <th>Image</th>
+            <th>Description</th>
+            <th>Date</th>
+            <th>Duration</th>
+            <th>Location</th>
+            <th>Tickets Available</th>
+            <th>Single Price</th>
+            <th>Group Price</th>
+            <th>Action</th>
+
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let event of events">
+            <td><img [src]="event.image" alt="Event Image" class="event-image"></td>
+            <td>{{ event.description }}</td>
+            <td>{{ event.date }}</td>
+            <td>{{ event.duration }}</td>
+            <td>{{ event.Location }}</td>
+            <td>{{ event.Ticketsavailable }}</td>
+            <td>${{ event.Singlesprice }}</td>
+            <td>${{ event.Groupsprice }}</td>
+            <td class="event-actions">
+              <button class="update-btn"  (click)="onUpdate(event)">
+                <i class="fas fa-edit"></i> Update
+              </button>
+              <button class="delete-btn" (click)="onDelete(event.event_id)">
+                <i class="fas fa-trash-alt"></i> Delete
+              </button>
+            </td>
+
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <app-footer2></app-footer2>
+  </div>
+</div>
+<app-update-event *ngIf="selectedEvent" [event]="selectedEvent" (closeModalEvent)="closeModal($event)"></app-update-event>

@@ -1,0 +1,170 @@
+/* Container layout styles */
+.dashboard-layout {
+  display: flex;
+  height: 100vh;
+}
+
+.main-content {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+app-sidebar {
+  width: 250px; /* Adjust the width as needed */
+  height: auto;
+}
+
+app-nav-bar {
+  flex-shrink: 0;
+}
+
+app-footer {
+  flex-shrink: 0;
+  margin-top: auto; /* Push the footer to the bottom */
+}
+
+.search-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 20px 0;
+}
+
+.search-input {
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  width: 300px;
+  margin-right: 10px;
+}
+
+.filter-button {
+  padding: 10px 20px;
+  background-color: rgb(0, 102, 255);
+  color: white;
+  border-style: solid;
+  border-color: rgb(0, 102, 255) ;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+}
+
+.filter-button:hover {
+  background-color: #ffffff;
+  color: rgb(0, 102, 255);
+  border-color: rgb(20, 82, 255);
+}
+
+.card-container{
+display: flex;
+flex-direction: row;
+
+}
+.events-section {
+  margin-top: 20px;
+}
+
+.events-section h2 {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.event-cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center; /* Center align the cards */
+}
+
+.event-card {
+  width: 300px; /* Set a fixed width */
+  height: auto; /* Height will adjust based on content */
+  overflow: hidden;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: transform 0.3s, box-shadow 0.3s;
+  border: 1px solid #ddd;
+  padding: 20px; /* Add padding for better spacing */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 20px;
+}
+
+.event-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.event-image {
+  width: 100%;
+  height: 200px; /* Set a fixed height for images */
+  object-fit: cover; /* Ensure images fit within the boundaries */
+  border-radius: 10px;
+}
+
+.event-details {
+  text-align: center;
+  margin-top: 10px;
+}
+
+.view-button {
+  margin-top: 10px;
+  padding: 10px 20px;
+  background-color: rgb(0, 102, 255);
+  color: white;
+  border-style: solid;
+  border-color: rgb(0, 102, 255) ;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+}
+
+.view-button:hover {
+  background-color: #ffffff;
+  color: rgb(0, 102, 255);
+  border-color: rgb(20, 82, 255);
+}
+
+.headings {
+  margin-left: 20px;
+}
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  margin-top: 60px;
+}
+
+.pagination button {
+  padding: 10px 20px;
+  margin: 0 5px;
+  background-color: rgb(0, 102, 255);
+  color: white;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.pagination button:hover {
+  background-color: #ffffff;
+  color: rgb(0, 102, 255);
+  border: 1px solid rgb(0, 102, 255);
+}
+
+.pagination .inactive-button {
+  background-color: #cccccc; /* Gray color for inactive button */
+  color: #666666; /* Darker gray text */
+  border: 1px solid #cccccc;
+}
+
+.pagination .inactive-button:hover {
+  background-color: #cccccc;
+  color: #666666;
+  cursor: not-allowed; /* No entry cursor */
+}
+
+
+

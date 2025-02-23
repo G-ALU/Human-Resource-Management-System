@@ -1,0 +1,35 @@
+<div class="dashboard-layout">
+  <div class="main-content">
+    <app-navbar2></app-navbar2>
+    <div class="table-container">
+      <table>
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Role</th>
+            <th>Status</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let user of users">
+            <td>{{ user.username }}</td>
+            <td>{{ user.email }}</td>
+            <td>{{ user.role }}</td>
+            <td>{{ user.status }}</td>
+            <td>
+              <button class="delete-btn"  (click)="confirmDeactivation(user)">
+                <i class="fas fa-trash-alt"></i> Delete
+              </button>
+              <button class="update-btn" (click)="confirmReactivation(user)">
+                <i class="fas fa-edit"></i> Update
+              </button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <app-footer2></app-footer2>
+  </div>
+</div>

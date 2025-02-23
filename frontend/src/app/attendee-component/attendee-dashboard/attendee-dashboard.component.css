@@ -1,0 +1,81 @@
+/* Container layout styles */
+.dashboard-layout {
+  display: flex;
+  height: 100vh;
+}
+
+.main-content {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+app-sidebar {
+  width: 250px; /* Adjust the width as needed */
+}
+
+app-nav-bar {
+  flex-shrink: 0;
+}
+
+app-footer {
+  flex-shrink: 0;
+  margin-top: auto; /* Push the footer to the bottom */
+}
+
+.paragraph {
+  margin-left: 20px;
+}
+
+.events {
+  margin-bottom: 20px;
+  width: 100%;
+  padding: 20px;
+  gap: 5px;
+  display: flex;
+  flex-direction: column;
+}
+
+.eventsp {
+  font-size: 24px;
+  margin-left: 20px;
+}
+
+/* Event cards container */
+.event-cards {
+  display: flex;
+  justify-content: space-between;
+}
+
+/* Event card styles */
+.event-card {
+  position: relative;
+  width: 30%;
+  overflow: hidden;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: transform 0.3s, box-shadow 0.3s, 
+
+}
+
+.event-card:hover {
+  transform: scale(1.03);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.event-image {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.event-text {
+  position: absolute;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.6);
+  color: white;
+  width: 100%;
+  text-align: center;
+  padding: 10px;
+  box-sizing: border-box;
+}

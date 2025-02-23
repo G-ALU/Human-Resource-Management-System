@@ -1,0 +1,73 @@
+/* Container layout styles */
+.dashboard-layout {
+  display: flex;
+  height: 100vh;
+}
+
+.main-content {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+app-sidebar-2 {
+  width: 250px; /* Adjust the width as needed */
+}
+
+app-navbar2 {
+  flex-shrink: 0;
+}
+
+app-footer2 {
+  flex-shrink: 0;
+  margin-top: auto; /* Push the footer to the bottom */
+}
+
+.notification-container {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.send-container {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.send-btn {
+  background-color: green;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 4px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+}
+
+.send-btn i {
+  margin-right: 5px;
+}
+
+.send-btn:hover {
+  background-color: darkgreen;
+}
+
+.form-group {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.form-group label {
+  margin-right: 10px;
+  min-width: 80px;
+}
+
+.form-group input[type="text"] {
+  flex: 1;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}

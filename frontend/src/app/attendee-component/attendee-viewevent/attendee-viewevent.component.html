@@ -1,0 +1,26 @@
+<div class="dashboard-layout">
+  <app-sidebar></app-sidebar>
+  <div class="main-content">
+    <app-nav-bar></app-nav-bar>
+    <div class="event-details-container">
+     
+      <div class="event-card" >
+        <img [src]="event.image" alt="Event Image" class="event-image">
+        <div class="event-details">
+          <h3>{{ event.description }}</h3>
+          <p>Date: {{ event.date }}</p>
+          <p>Duration: {{ event.duration }}</p>
+          <p>Location: {{ event.Location }}</p>
+          <p>Tickets Available: {{ event.Ticketsavailable }}</p>
+          <p>Single Price: ${{ event.Singlesprice }}</p>
+          <p>Group Price: ${{ event.Groupsprice }}</p>
+
+        </div>
+      </div>
+    </div>
+    <div class="buy-ticket-container">
+      <button class="buy-ticket-btn" routerlink="/login">Buy Ticket</button>
+    </div>
+    <app-footer></app-footer>
+  </div>
+</div>

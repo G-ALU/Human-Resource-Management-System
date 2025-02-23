@@ -1,0 +1,24 @@
+{
+    "dataworkspace.excludedProjects": [
+        "PLANA/PLANA.sqlproj"
+    ],
+    "sqltools.connections": [
+        {
+            "connectionTimeout": 15,
+            "mssqlOptions": {
+                "appName": "SQLTools",
+                "useUTC": true,
+                "encrypt": true,
+                "trustServerCertificate": true,
+                "instanceName": "DESKTOP-5OATST2"
+            },
+            "previewLimit": 50,
+            "server": "localhost",
+            "port": 1433,
+            "driver": "MSSQL",
+            "name": "PLANA",
+            "database": "planadb",
+            "username": "Glen"
+        }
+    ]
+}

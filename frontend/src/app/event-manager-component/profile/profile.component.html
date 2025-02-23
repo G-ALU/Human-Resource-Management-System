@@ -1,0 +1,61 @@
+<div class="dashboard-layout">
+  <div class="main-content">
+    <app-navbar2></app-navbar2>
+    <div class="profile-content">
+      <div class="profile-image-section">
+        <img src="/pexels-ketut-subiyanto-4473796.jpg" alt="" class="profile-image">
+        <button class="edit-profile-button">Edit profile pic</button>
+      </div>
+      <div class="profile-form-section">
+
+        <div class="login-text">
+          <h3>UPDATE YOUR CREDENTIALS</h3>
+         <div *ngIf="updateSuccess" class="success">
+           {{ successMessage }}
+         </div>
+         <div *ngIf="errorMessages.general" class="error">
+           {{ errorMessages.general }}
+         </div>
+       </div>
+        <form #profileForm="ngForm" (ngSubmit)="onSaveChanges(profileForm)" class="profile-form">
+          <div class="form-group">
+            <label for="email">Email:</label>
+            <input
+              type="email"
+              id="email"
+              placeholder="Email"
+              name="email"
+              [(ngModel)]="user.email"
+              required
+              email
+              #email="ngModel"
+            />
+            <div *ngIf="email.touched && email.invalid" class="error">{{ getEmailErrorMessage(email) }}</div>
+
+
+            <label for="password">New Password:</label>
+            <input
+              type="password"
+              id="password"
+              placeholder="Password"
+              name="password"
+              [(ngModel)]="user.password"
+              required
+              minlength="6"
+              #password="ngModel"
+            />
+            <div *ngIf="password.touched && password.invalid" class="error">{{ getPasswordErrorMessage(password) }}</div>
+            <div *ngIf="password.errors?.['minlength']" class="error">Password must be at least 6 characters long.</div>
+          </div>
+        <div class="submit">
+
+          <button type="submit" [disabled]="profileForm.invalid" class="save-changes-button">Save changes</button>
+
+        </div>
+
+        </form>
+      </div>
+    </div>
+    <app-footer2></app-footer2>
+  </div>
+</div>

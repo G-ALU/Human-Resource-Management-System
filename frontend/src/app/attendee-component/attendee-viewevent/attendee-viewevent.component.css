@@ -1,0 +1,90 @@
+/* Container layout styles */
+.dashboard-layout {
+  display: flex;
+  height: 100vh;
+}
+
+.main-content {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  overflow: hidden; /* Ensures content stays within the container */
+}
+
+app-sidebar {
+  width: 250px; /* Adjust the width as needed */
+  height: 100vh; /* Ensures it takes full height */
+  background-color: blue; /* Ensure sidebar background color */
+  color: white; /* Text color inside sidebar */
+}
+
+app-nav-bar {
+  flex-shrink: 0;
+}
+
+app-footer {
+  flex-shrink: 0;
+  margin-top: auto; /* Push the footer to the bottom */
+}
+
+.event-details-container {
+  display: flex;
+  justify-content: center; /* Center the card horizontally */
+  align-items: center; /* Center the card vertically */
+  flex-grow: 1; /* Make the container take up available space */
+  padding: 20px;
+}
+
+.event-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 300px; /* Fixed width */
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.event-image {
+  width: 100%;
+  height: auto;
+  max-width: 260px; /* Fixed width */
+  max-height: 200px; /* Fixed height */
+  object-fit: cover; /* Ensures the image covers the area without distortion */
+  margin-bottom: 15px;
+}
+
+.event-details {
+  text-align: center;
+}
+
+.event-details h3 {
+  margin-bottom: 10px;
+}
+
+.event-details p {
+  margin: 5px 0;
+}
+
+.buy-ticket-container {
+  display: flex;
+  justify-content: center;
+  margin: 20px 0;
+}
+
+.buy-ticket-btn {
+  padding: 10px 20px;
+  font-size: 1.2em;
+  cursor: pointer;
+  background-color: blue;
+  color: white;
+  border-radius: 5px;
+  border: none;
+}
+
+.buy-ticket-btn:hover {
+  background-color: white;
+  color: blue;
+  border: 1px solid blue;
+}

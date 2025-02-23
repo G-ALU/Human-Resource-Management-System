@@ -1,0 +1,52 @@
+###REGISTER USER
+POST http://localhost:5500/users/register
+Content-Type: application/json
+
+{
+    "username": "Ness",
+    "email": "ness@example.com",
+    "password": "ness12345"
+}
+
+###LOGIN USER
+POST http://localhost:5500/users/login
+Content-Type: application/json
+
+{
+    "email": "glenA@example.com",
+    "password": "glen12345"
+}
+
+###UPDATE USER INFO
+PUT http://localhost:5500/users/gamesmy177@gmail.com
+Content-Type: application/json
+
+{
+    "password": "rodgers"
+}
+
+
+###SWITCH ROLE TO MANAGER
+PUT http://localhost:5500/users/switch-role
+Content-Type: application/json
+
+{
+    "user_id":"9c1c526d-4a63-45b1-ace0-09b034922d0d"
+}
+
+###SWITCH ROLE TO USER
+PUT http://localhost:5500/users/switch-role2
+Content-Type: application/json
+
+{
+    "user_id":"9c1c526d-4a63-45b1-ace0-09b034922d0d"
+}
+
+###GET MANAGERS
+GET http://localhost:5500/users/fetch-managers
+Content-Type: application/json
+
+### GET SINGLE MANAGER
+GET http://localhost:5500/users/getManager/4cd4646e-a668-4dbf-9f3a-68706121f3c4
+Content-Type: application/json
+

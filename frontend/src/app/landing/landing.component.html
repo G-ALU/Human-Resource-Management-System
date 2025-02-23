@@ -1,0 +1,73 @@
+<div class="main">
+  <div class="hero">
+    <div class="content">
+      <h1>Experience the best live music Concert</h1>
+      <p>Discover, Book, and Enjoy Unforgettable Music Events</p>
+      <button class="btn">Browse Concerts</button>
+    </div>
+    <div class="btns"></div>
+  </div>
+
+  <div class="card-container">
+  <div class="event-card" *ngFor="let event of paginatedEvents">
+    <img [src]="event.image" alt="Event Image" class="event-image">
+    <div class="event-details">
+      <h3>{{ event.description }}</h3>
+      <p>Date: {{ event.date }}</p>
+      <p>Duration: {{ event.duration }}</p>
+      <p>Location: {{ event.Location }}</p>
+      <p>Tickets Available: {{ event.Ticketsavailable }}</p>
+      <p>Single Price: ${{ event.Singlesprice }}</p>
+      <p>Group Price: ${{ event.Groupsprice }}</p>
+      <button class="view-button" (click)="viewEvent()" >View</button>
+    </div>
+  </div>
+  </div>
+
+  <div class="how-it-works">
+    <h2>How it works</h2>
+    <div class="steps">
+      <div class="step">
+        <h2>Discover Concerts</h2>
+        <p>Browse through a curated list of music concerts</p>
+      </div>
+      <div class="step">
+        <h2>Book Tickets</h2>
+        <p>Choose your concert, select your tickets, and book effortlessly</p>
+      </div>
+      <div class="step">
+        <h2>Enjoy the event</h2>
+        <p>Get ready for an unforgettable live music experience</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="newsLetter">
+    <div class="writings">
+      <h2 class="sub">Subscribe</h2>
+      <p>Signup to get the latest news on new events</p>
+    </div>
+    <div class="input">
+      <input type="email" class="inputField" placeholder="Enter email">
+      <button class="subscribeBtn">Subscribe</button>
+    </div>
+  </div>
+</div>
+
+<footer class="footer">
+  <div class="div">
+    <h1>Plana</h1>
+  </div>
+  <div class="links">
+    <p> lorem Ipsum</p>
+    <p> lorem Ipsum</p>
+    <p> lorem Ipsum</p>
+    <p> lorem Ipsum</p>
+  </div>
+  <div class="icons">
+    <i class="fa fa-twitter" aria-hidden="true"></i>Twitter
+    <i class="fa fa-instagram" aria-hidden="true"></i>Instagram
+    <i class="fa fa-facebook" aria-hidden="true"></i>Facebook
+
+  </div>
+</footer>

@@ -1,0 +1,20 @@
+/* Footer styles */
+.footer {
+  background-color: #ffffff;
+  padding: 20px 0;
+  text-align: center;
+  width: 100%;
+  
+
+}
+
+.footer-content {
+  max-width: 800px;
+  margin: 0 auto;
+  color: #333;
+}
+
+.footer-content p {
+  margin: 10px 0;
+  font-size: 16px;
+}

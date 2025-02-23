@@ -1,0 +1,21 @@
+<div class="dashboard-layout">
+  <div class="main-content">
+    <app-navbar2></app-navbar2>
+    <div class="notification-container">
+      <div class="send-container">
+        <button class="send-btn"  (click)="sendNotification()">
+          <i class="fas fa-paper-plane"></i> Send
+        </button>
+        <div class="form-group">
+          <label for="to">To:</label>
+          <input type="text" id="to" name="to">
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="subject">Subject:</label>
+        <input type="text" id="subject" name="subject">
+      </div>
+    </div>
+    <app-footer2></app-footer2>
+  </div>
+</div>

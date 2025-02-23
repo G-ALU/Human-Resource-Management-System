@@ -1,0 +1,79 @@
+<div class="dashboard-layout">
+  <div class="main-content">
+    <app-navbar2></app-navbar2>
+    <div class="create-event-container">
+      <button class="create-event-btn" (click)="openModal()">+ Create Event</button>
+    </div>
+    <div class="card-container">
+      <table class="event-table">
+        <thead>
+          <tr>
+            <th>Image</th>
+            <th>Description</th>
+            <th>Date</th>
+            <th>Duration</th>
+            <th>Location</th>
+            <th>Tickets Available</th>
+            <th>Single Price</th>
+            <th>Group Price</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let event of events">
+            <td><img [src]="event.image" alt="Event Image" class="event-image"></td>
+            <td>{{ event.description }}</td>
+            <td>{{ event.date }}</td>
+            <td>{{ event.duration }}</td>
+            <td>{{ event.Location }}</td>
+            <td>{{ event.Ticketsavailable }}</td>
+            <td>${{ event.Singlesprice }}</td>
+            <td>${{ event.Groupsprice }}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <app-footer2></app-footer2>
+
+    <!-- Modal Form -->
+    <div class="modal" *ngIf="isModalOpen">
+      <div class="modal-content">
+        <span class="close-btn" (click)="closeModal()">&times;</span>
+        <form (submit)="createEvent($event)">
+          <div class="form-group">
+            <label for="image">Image URL</label>
+            <input type="text" id="image" name="image" required>
+          </div>
+          <div class="form-group">
+            <label for="description">Description</label>
+            <textarea id="description" name="description" required></textarea>
+          </div>
+          <div class="form-group">
+            <label for="date">Date</label>
+            <input type="date" id="date" name="date" required>
+          </div>
+          <div class="form-group">
+            <label for="duration">Duration</label>
+            <input type="duration" id="duration" name="duration" required>
+          </div>
+          <div class="form-group">
+            <label for="Location">Location</label>
+            <input type="text" id="Location" name="Location" required>
+          </div>
+          <div class="form-group">
+            <label for="Ticketsavailable">Tickets Available</label>
+            <input type="number" id="Ticketsavailable" name="Ticketsavailable" required>
+          </div>
+          <div class="form-group">
+            <label for="Singlesprice">Single Price</label>
+            <input type="number" id="Singlesprice" name="Singlesprice" required>
+          </div>
+          <div class="form-group">
+            <label for="Groupsprice">Group Price</label>
+            <input type="number" id="Groupsprice" name="Groupsprice" required>
+          </div>
+          <button type="submit" class="create-btn">Create Event</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>

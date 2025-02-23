@@ -1,0 +1,32 @@
+### Book an Event
+POST http://localhost:5500/bookings
+Content-Type: application/json
+
+{
+    "user_id": "ee88bb53-0415-496d-bac5-0259f2acf434",
+    "event_id": "1cca19ac-9749-476e-a328-91d13d4b69bd"
+}
+
+### Get All Bookings
+GET http://localhost:5500/bookings
+Content-Type: application/json
+
+### Get Bookings by User
+GET http://localhost:5500/bookings/user/ad7105ef-8e32-41e1-b57d-8ef7a331963d
+Content-Type: application/json
+
+### Get Bookings by Event
+GET http://localhost:5500/bookings/event/3cafbdcf-bb34-4878-8e76-40487a19422b
+Content-Type: application/json
+
+### Cancel a Booking
+DELETE http://localhost:5500/bookings
+Content-Type: application/json
+
+{
+    "booking_id": "2b9b46ae-e431-464d-95c4-c4c2adfd90d6"
+   
+}
+
+### GET TOTAL REVENUE
+GET http://localhost:5500/bookings/book/revenue

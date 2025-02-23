@@ -1,0 +1,44 @@
+<div class="dashboard-layout">
+  <div class="main-content">
+    <app-navbar3></app-navbar3>
+    <div *ngIf="successMessage" class="alert alert-success fade-in">
+      {{ successMessage }}
+    </div>
+    <div class="table-container">
+      <table>
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Role</th>
+            <th>Status</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let manager of managers">
+            <td>{{ manager.username }}</td>
+            <td>{{ manager.email }}</td>
+            <td>{{ manager.role }}</td>
+            <td>{{ manager.status }}</td>
+            <td>
+
+              <button class="delete-btn"  (click)="confirmDeactivation(manager)">
+                <i class="fas fa-trash-alt"></i> Deactivate Account
+              </button>
+              <button class="update-btn" (click)="confirmReactivation(manager)">
+                <i class="fas fa-edit"></i> Activate Account
+              </button>
+              <button   class="switch-btn" *ngIf="manager.role === 'manager'" (click)="switchToUser(manager.user_id)">
+                <i class="fa fa-user" aria-hidden="true"></i>
+                Switch to Employee
+              </button>
+             
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <app-footer2></app-footer2>
+  </div>
+</div>

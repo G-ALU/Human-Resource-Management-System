@@ -1,0 +1,18 @@
+### FETCH SINGLE ATTENDEE
+GET http://localhost:5500/users/f7f608a9-b051-475f-8287-d02e3dd4c6e6
+Content-Type: application/json
+
+###FETCH ALL ATTENDEES
+GET http://localhost:5500/users/fetch-all-users
+Content-Type: application/json
+
+### DELETE ATTENDEE
+PUT http://localhost:5500/users/deactivate/195a6b7a-b2fb-47cf-a231-d8386ee81779
+Content-Type: application/json
+
+### REACTIVATE ATTENDEE
+PUT http://localhost:5500/users/reactive/195a6b7a-b2fb-47cf-a231-d8386ee81779
+Content-Type: application/json
+
+
+   
