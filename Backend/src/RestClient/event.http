@@ -1,41 +1,41 @@
 ###CREATE EVENT
-POST http://localhost:5500/events/create
+POST http://localhost:5500/jobs/create
 Content-Type: application/json
 
 
 {
-    "date": "2th July 2024",
-    "duration": "2hrs Starting From 8AM",
-    "Location": "South Africa",
-    "Ticketsavailable": "400",
-    "Singlesprice": 2000.00,
-    "Groupsprice": 1000.00,
-    "description": "GAME DRIVE: Enjoy nature",
-    "image":"pexels-emma-bauso-1183828-2253842.jpg"
+    "image":"pexels-emma-bauso-1183828-2253842.jpg",
+    "title": "Printer",
+    "description": "Printing papers",
+    "location": "Nairobi",
+    "status": "Open",
+    "salary":4500.00
+    
+   
 }
 
 ###UPDATE EVENT
-PUT http://localhost:5500/events/4121a380-96ee-4003-b6ca-3b7caa02aeb1
+PUT http://localhost:5500/jobs/08c0af61-ce93-4a4b-be21-ffad81366a26
 Content-Type: application/json
 
 
 {
-    "date": "2th December 2024",
-    "duration": "2hrs Starting From 8AM",
-    "Location": "South Africa",
-    "Ticketsavailable": "400",
-    "Singlesprice": 2000.00,
-    "Groupsprice": 1000.00,
-    "description": "Ball Game",
-    "image":"pexels-emma-bauso-1183828-2253842.jpg"
+     "image":"pexels-emma-bauso-1183828-2253842.jpg",
+    "title": "receptionist",
+    "description": "directing visitors",
+    "location": "Garissa",
+    "status": "Open",
+    "salary":4500.00
+
+   
 }
 
-###DELETE EVENT
-DELETE http://localhost:5500/events/1cca19ac-9749-476e-a328-91d13d4b69bd
+###DELETE JOBS
+DELETE http://localhost:5500/jobs/1cca19ac-9749-476e-a328-91d13d4b69bd
 
-###VIEW ALL EVENTS
-GET http://localhost:5500/events/all-events
+###VIEW ALL JOBS
+GET http://localhost:5500/jobs/all-jobs
 Content-Type: application/json
 
-###VIEW ONE EVENT
-GET http://localhost:5500/events/798067e9-f134-42d1-84e4-565cfc9a274a
+###VIEW ONE JOB
+GET http://localhost:5500/jobs/ca19ca73-cda4-49ee-a4e7-d0647f07b33b

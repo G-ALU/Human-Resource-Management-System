@@ -36,12 +36,12 @@ app.use((req, res, next) => {
     next();
 });
 
-app.use(bodyParser.json());
+// app.use(bodyParser.json());
 app.use(express.json());
 app.use(cors())
 
 app.use('/users', user_router);
-app.use('/events', event_router);
+app.use('/jobs', event_router);
 app.use('/bookings', booking_router)
 
 app.use((err:Error, req:Request, res:Response, next:NextFunction)=>{

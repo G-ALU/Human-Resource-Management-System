@@ -5,74 +5,79 @@ import { Image } from 'mssql';
 let EventService = new eventService();
 
 export class EventController {
-    async createEvent(req: Request, res: Response){
+    async createjobs(req: Request, res: Response){
         
         try {
-            let {date, duration, Location, Ticketsavailable, Singlesprice, Groupsprice, description, image} = req.body
+            let {image, title, description, location, status, salary} = req.body
 
-            let result = await EventService.createEvent(req.body)
+            let result = await EventService.createjobs(req.body)
 
             return res.status(201).json(result)
         } catch (error) {
             return res.json({
-                error: error
+                error: 'Error in creating the job'
             })
             
         }
 
     }
 
-    async updateEvent(req: Request, res: Response){
+    async updatejobs(req: Request, res: Response){
         try{
-            let event_id = req.params.event_id
-            let {date, duration, Location, Ticketsavailable, Singlesprice, Groupsprice, description, image} = req.body
+            let job_id = req.params.job_id
+            let {image, title, description, location, status, salary} = req.body
 
-            let event = {
-                event_id: event_id,
-                date, duration, Location, Ticketsavailable, Singlesprice, Groupsprice, description, image
+            let jobs = {
+                job_id: job_id,
+                image, 
+                title, 
+                description, 
+                location, 
+                status, 
+                salary
             }
-            let response = await EventService.updateEvent(event)
+            let response = await EventService.updatejobs(jobs)
             return res.status(200).json(response)
         }catch (error){
             return res.json({
-                error: 'Failed to update event details'
+                error: 'Failed to update the Jobs details'
             })
         }
     }
 
-    async deleteEvent(req: Request, res: Response){
+    async deletejobs(req: Request, res: Response){
         try{
-            let {event_id} = req.params
+            let {job_id} = req.params
 
-            let response = await EventService.deleteEvent(event_id)
+            let response = await EventService.deletejobs(job_id)
             return res.status(200).json(response)
         }catch(error){
             return res.json({
-                error: 'Error deleting event'
+                error: 'Error in removing the job'
             })
         }
     }
 
-    async fetchAllEvents(req: Request, res: Response){
+    async fetchalljobs(req: Request, res: Response){
         try{
-            let result = await EventService.fetchAllEvents()
+            let result = await EventService.fetchalljobs()
             return res.status(200).json(result)
         }catch(error){
             return res.json({
-                error
+                error: 'Error in getting all the jobs'
             })
         }
     }
 
-    async fetchSingleEvent(req: Request, res: Response){
+    async fetchsinglejob(req: Request, res: Response){
         try{
-            let{event_id} = req.params
+            let{job_id} = req.params
 
-            let response = await EventService.fetchSingleEvent(event_id)
+            let response = await EventService.fetchsinglejob(job_id)
             return res.status(200).json(response)
         }catch(error){
             return res.json({
-                error: 'Error fetching event'
+                error: 'Error in getting the job'
             })
         }
     }

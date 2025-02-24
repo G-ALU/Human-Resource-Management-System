@@ -1,0 +1,12 @@
+CREATE TABLE jobs (job_id VARCHAR(255) PRIMARY KEY NOT NULL,
+image VARCHAR(255) NOT NULL,
+title VARCHAR(255) NOT NULL,
+description VARCHAR(255) NOT NULL,
+location VARCHAR(50) NOT NULL,
+status VARCHAR(10) NOT NULL CHECK (status IN ('Open', 'Closed')),
+salary DECIMAL(10,2) NOT NULL,
+)
+
+DROP TABLE jobs
+
+SELECT * FROM jobs

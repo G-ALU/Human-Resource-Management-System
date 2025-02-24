@@ -1,11 +1,9 @@
-export interface event{
-    event_id: string,
-    date: string,
-    duration: string,
-    Location: string,
-    Ticketsavailable: string,
-    Singlesprice: number,
-    Groupsprice: number,
+export interface jobs{
+    job_id: string,
+    image: string,
+    title: string,
     description: string,
-    image: string
+    location: string,
+    status: string,
+    salary: number,
 }
