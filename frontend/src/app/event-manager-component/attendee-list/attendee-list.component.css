@@ -28,7 +28,7 @@ app-footer2 {
 }
 
 table {
-  width: 50%;
+  width: 80%;
   border-collapse: collapse;
 }
 
@@ -42,29 +42,68 @@ th {
   background-color: #f2f2f2;
 }
 
-.delete-btn, .update-btn {
-  padding: 5px 10px;
+
+.delete-btn{
+  background-color:red;
+  color: white;
   border: none;
+  margin-right: 7px;
+  padding: 5px 10px;
   border-radius: 4px;
   cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.delete-btn:hover {
+  background-color: #d95248; 
+  transform: scale(1.05); /* Slight zoom */
+}
+
+.delete-btn:active {
+  transform: scale(0.95); /* Shrink effect on click */
+}
+
+.update-btn{
+  background-color:green;
   color: white;
-  margin-right: 5px;
-}
-.delete-btn :hover {
-  background-color: rgb(231, 189, 189);
-}
-.update-btn :hover {
-  background-color: rgb(153, 196, 149);
-}
-
-.delete-btn {
-  background-color: red;
+  border: none;
+  margin-right: 7px;
+  padding: 5px 10px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
-.update-btn {
-  background-color: green;
+.update-btn:hover {
+  background-color: rgb(148, 214, 148); 
+  transform: scale(1.05); /* Slight zoom */
 }
 
-.delete-btn i, .update-btn i {
-  margin-right: 5px;
+.update-btn:active {
+  transform: scale(0.95); /* Shrink effect on click */
+}
+
+.alert-success {
+  width: 30%;
+  margin-left: 290px;
+  padding: 10px;
+  color: white;
+  background-color: #28a745;
+  border-radius: 5px;
+  text-align: center;
+  font-weight: bold;
+  transition: opacity 0.5s ease-in-out;
+}
+
+.fade-in {
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }

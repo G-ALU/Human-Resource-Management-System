@@ -7,3 +7,5 @@ export interface jobs{
     status: string,
     salary: number,
 }
+
+export default jobs

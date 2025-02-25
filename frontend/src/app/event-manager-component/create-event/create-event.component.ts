@@ -16,22 +16,22 @@ import { log } from 'console';
 })
 export class CreateEventComponent implements OnInit {
   isModalOpen = false;
-  events: any[] = [];
+  jobs: any[] = [];
 
 
   constructor(private eventService: EventService1) {}
 
   ngOnInit(): void {
-    this.fetchEvents();
+    this.fetchjobs();
   }
 
-  fetchEvents(): void {
-    this.eventService.getAllEvents().subscribe({
+  fetchjobs(): void {
+    this.eventService.getalljobs().subscribe({
       next: (data) => {
-        this.events = data.event;
+        this.jobs = data.jobs;
       },
       error: (err) => {
-        console.error('Failed to fetch events', err);
+        console.error('Failed to get the jobs', err);
       }
     });
   }
@@ -46,28 +46,26 @@ export class CreateEventComponent implements OnInit {
 
 
 
-  createEvent(event: Event): void {
-    event.preventDefault();
-    const formData = new FormData(event.target as HTMLFormElement);
-    const eventData = {
+  createjobs(jobs: any): void {
+    jobs.preventDefault();
+    const formData = new FormData(jobs.target as HTMLFormElement);
+    const jobsData = {
       image: formData.get('image'),
+      title: formData.get('title'),
       description: formData.get('description'),
-      date: formData.get('date'),
-      duration: formData.get('duration'),
-      Location: formData.get('Location'),
-      Ticketsavailable: formData.get('Ticketsavailable'),
-      Singlesprice: formData.get('Singlesprice'),
-      Groupsprice: formData.get('Groupsprice'),
+      location: formData.get('location'),
+      status: formData.get('status'),
+      salary: formData.get('salary'),
     };
 
-    this.eventService.createEvent(eventData).subscribe({
+    this.eventService.createjobs(jobsData).subscribe({
 
       next: (data) => {
-        this.events.push(data.event);
+        this.jobs.push(data.jobs);
         this.closeModal();
       },
       error: (err) => {
-        console.error('Failed to create event', err);
+        console.error('Failed to create the job', err);
       }
       
     });

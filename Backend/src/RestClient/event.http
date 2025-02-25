@@ -1,4 +1,4 @@
-###CREATE EVENT
+###CREATE JOB
 POST http://localhost:5500/jobs/create
 Content-Type: application/json
 
@@ -14,18 +14,18 @@ Content-Type: application/json
    
 }
 
-###UPDATE EVENT
-PUT http://localhost:5500/jobs/08c0af61-ce93-4a4b-be21-ffad81366a26
+###UPDATE JOB
+PUT http://localhost:5500/jobs/8d7789f5-18ec-4cdb-a974-9204515b89d4
 Content-Type: application/json
 
 
 {
-     "image":"pexels-emma-bauso-1183828-2253842.jpg",
-    "title": "receptionist",
-    "description": "directing visitors",
-    "location": "Garissa",
+     "image":"https://images.pexels.com/photos/7108325/pexels-photo-7108325.jpeg",
+    "title": "Receptionist",
+    "description": "Receiving calls",
+    "location": "Nairobi",
     "status": "Open",
-    "salary":4500.00
+    "salary":5500.00
 
    
 }

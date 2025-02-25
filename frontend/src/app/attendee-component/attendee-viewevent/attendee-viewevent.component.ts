@@ -13,7 +13,7 @@ import { EventService1 } from '../../services/event.service';
   styleUrls: ['./attendee-viewevent.component.css']
 })
 export class AttendeeVieweventComponent implements OnInit {
-  event: any;  // Variable to store the event data
+  jobs: any;  // Variable to store the event data
 
   constructor(
     private router: Router,
@@ -22,19 +22,19 @@ export class AttendeeVieweventComponent implements OnInit {
   ) {}
 
   ngOnInit(): void {
-    this.getOneEvent();
+    this.getonejob();
   }
 
-  getOneEvent(): void {
-    const eventId = this.route.snapshot.paramMap.get('id');  // Get the event ID from the URL
-    if (eventId) {
-      this.eventService.getoneEvent(eventId).subscribe({
+  getonejob(): void {
+    const jobId = this.route.snapshot.paramMap.get('id');  // Get the event ID from the URL
+    if (jobId) {
+      this.eventService.getonejob(jobId).subscribe({
         next: (data) => {
-          this.event = data.event;
-          console.log(this.event)
+          this.jobs = data.jobs;
+          console.log(this.jobs)
         },
         error: (err) => {
-          console.error('Failed to fetch event', err);
+          console.error('Failed to get the job', err);
         }
       });
     }

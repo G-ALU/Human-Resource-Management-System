@@ -16,30 +16,30 @@ import { EventService1 } from '../services/event.service';
 })
 export class LandingComponent implements OnInit{
 
-  events: any[] = [];
+  jobs: any[] = [];
   currentPage: number = 1;
   itemsPerPage: number = 4; // Adjust the number of items per page
   constructor(private eventService: EventService1, private router: Router) {}
 
   ngOnInit(): void {
-    this.eventService.getAllEvents().subscribe({
+    this.eventService.getalljobs().subscribe({
       next: (data) => {
-        this.events = data.event;
-        console.log(this.events)
+        this.jobs = data.jobs;
+        console.log(this.jobs)
       },
       error: (err) => {
-        console.error('Failed to fetch events', err);
+        console.error('Failed to get the jobs', err);
       }
     });
   }
-  get paginatedEvents() {
+  get paginatedjobs() {
     const startIndex = (this.currentPage - 1) * this.itemsPerPage;
     const endIndex = startIndex + this.itemsPerPage;
-    return this.events.slice(startIndex, endIndex);
+    return this.jobs.slice(startIndex, endIndex);
   }
 
   nextPage(): void {
-    if (this.currentPage * this.itemsPerPage < this.events.length) {
+    if (this.currentPage * this.itemsPerPage < this.jobs.length) {
       this.currentPage++;
     }
   }

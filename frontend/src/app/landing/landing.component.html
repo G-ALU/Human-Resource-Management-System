@@ -9,16 +9,14 @@
   </div>
 
   <div class="card-container">
-  <div class="event-card" *ngFor="let event of paginatedEvents">
-    <img [src]="event.image" alt="Event Image" class="event-image">
+  <div class="event-card" *ngFor="let jobs of paginatedjobs">
+    <img [src]="jobs.image" alt="jobs Image" class="jobs-image">
     <div class="event-details">
-      <h3>{{ event.description }}</h3>
-      <p>Date: {{ event.date }}</p>
-      <p>Duration: {{ event.duration }}</p>
-      <p>Location: {{ event.Location }}</p>
-      <p>Tickets Available: {{ event.Ticketsavailable }}</p>
-      <p>Single Price: ${{ event.Singlesprice }}</p>
-      <p>Group Price: ${{ event.Groupsprice }}</p>
+      <h3>{{ jobs.title }}</h3>
+      <p>Description: {{ jobs.description }}</p>
+      <p>Location: {{ jobs.location }}</p>
+      <p>Status: {{ jobs.status }}</p>
+      
       <button class="view-button" (click)="viewEvent()" >View</button>
     </div>
   </div>

@@ -6,32 +6,29 @@
         <thead>
           <tr>
             <th>Image</th>
+            <th>Title</th>
             <th>Description</th>
-            <th>Date</th>
-            <th>Duration</th>
             <th>Location</th>
-            <th>Tickets Available</th>
-            <th>Single Price</th>
-            <th>Group Price</th>
-            <th>Action</th>
+            <th>Status</th>
+            <th>Salary</th>
+            <th>Actions</th>
 
           </tr>
         </thead>
         <tbody>
-          <tr *ngFor="let event of events">
-            <td><img [src]="event.image" alt="Event Image" class="event-image"></td>
-            <td>{{ event.description }}</td>
-            <td>{{ event.date }}</td>
-            <td>{{ event.duration }}</td>
-            <td>{{ event.Location }}</td>
-            <td>{{ event.Ticketsavailable }}</td>
-            <td>${{ event.Singlesprice }}</td>
-            <td>${{ event.Groupsprice }}</td>
-            <td class="event-actions">
-              <button class="update-btn"  (click)="onUpdate(event)">
+          <tr *ngFor="let jobs of jobs">
+            <td><img [src]="jobs.image" alt="jobs Image" class="jobs-image"></td>
+            <td>{{ jobs.title }}</td>
+            <td>{{ jobs.description }}</td>
+            <td>{{ jobs.location }}</td>
+            <td>{{ jobs.status }}</td>
+            <td>{{ jobs.salary}}</td>
+            
+            <td class="jobs-actions">
+              <button class="update-btn"  (click)="onUpdate(jobs.job_id)">
                 <i class="fas fa-edit"></i> Update
               </button>
-              <button class="delete-btn" (click)="onDelete(event.event_id)">
+              <button class="delete-btn" (click)="onDelete(jobs.job_id)">
                 <i class="fas fa-trash-alt"></i> Delete
               </button>
             </td>
@@ -43,4 +40,4 @@
     <app-footer2></app-footer2>
   </div>
 </div>
-<app-update-event *ngIf="selectedEvent" [event]="selectedEvent" (closeModalEvent)="closeModal($event)"></app-update-event>
+<app-update-event *ngIf="selectedjobs" [jobs]="selectedjobs" (closeModaljobs)="closeModal($event)"></app-update-event>
