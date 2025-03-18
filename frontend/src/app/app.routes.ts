@@ -19,6 +19,7 @@ import { RegisterComponent } from './register/register.component';
 import { SidebarComponent } from './attendee-component/sidebar/sidebar.component';
 import { Sidebar2Component } from './event-manager-component/sidebar-2/sidebar-2.component';
 import { Sidebar3Component } from './admin/sidebar3/sidebar3.component';
+import { AdminprofileComponent } from './admin/adminprofile/adminprofile.component';
 
 export const routes: Routes = [
 
@@ -56,7 +57,7 @@ export const routes: Routes = [
     {path:'managerlist', component:ManagerListComponent},
     {path:'dashboard1', component:Dashboard1Component},
     {path:'view1', component:ViewEventComponent},
-    {path:'profile2',component:ProfileComponent}
+    {path:'profile3',component:AdminprofileComponent}
 
 
   ]},

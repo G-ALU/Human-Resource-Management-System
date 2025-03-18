@@ -1,6 +1,5 @@
 <div class="dashboard-layout">
   <div class="main-content">
-    <app-navbar3></app-navbar3>
     <div class="card-container">
       <table class="event-table">
         <thead>
@@ -22,7 +21,7 @@
             <td>{{ jobs.description }}</td>
             <td>{{ jobs.location }}</td>
             <td>{{ jobs.status }}</td>
-            <td>{{ jobs.salary}}</td>
+            <td>Kshs. {{ jobs.salary}}</td>
             
             <td class="jobs-actions">
               <button class="update-btn"  (click)="onUpdate(jobs.job_id)">
@@ -37,7 +36,7 @@
         </tbody>
       </table>
     </div>
-    <app-footer2></app-footer2>
+    <app-footer3></app-footer3>
   </div>
 </div>
 <app-update-event *ngIf="selectedjobs" [jobs]="selectedjobs" (closeModaljobs)="closeModal($event)"></app-update-event>

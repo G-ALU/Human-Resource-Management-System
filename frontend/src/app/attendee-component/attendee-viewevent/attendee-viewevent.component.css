@@ -13,7 +13,7 @@
 
 app-sidebar {
   width: 250px; /* Adjust the width as needed */
-  height: 100vh; /* Ensures it takes full height */
+  height: auto; /* Ensures it takes full height */
   background-color: blue; /* Ensure sidebar background color */
   color: white; /* Text color inside sidebar */
 }

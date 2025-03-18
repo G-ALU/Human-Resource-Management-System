@@ -1,8 +1,7 @@
 import { Component , OnInit} from '@angular/core';
 import { RouterLink, RouterOutlet } from '@angular/router';
-import { Footer2Component } from '../../event-manager-component/footer2/footer2.component';
 import { Sidebar3Component } from '../sidebar3/sidebar3.component';
-import { Navbar3Component } from '../navbar3/navbar3.component';
+import { footer3Component } from '../footer3/footer3.component';
 import { UserService } from '../../services/users.service';
 import { HttpClient } from '@angular/common/http';
 import { CommonModule } from '@angular/common';
@@ -12,7 +11,7 @@ import { ActivatedRoute, Router } from '@angular/router';
 @Component({
   selector: 'app-attendee-list1',
   standalone: true,
-  imports: [RouterOutlet,Footer2Component, Sidebar3Component, Navbar3Component, RouterLink, CommonModule],
+  imports: [RouterOutlet,footer3Component, Sidebar3Component, RouterLink, CommonModule],
   templateUrl: './attendee-list.component.html',
   styleUrl: './attendee-list.component.css'
 })

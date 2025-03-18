@@ -29,8 +29,8 @@
       <input type="number" id="salary" formControlName="salary">
     </div>
     <div class="input-container">
-      <label for="image">Upload Image</label>
-      <input type="file" id="image" (change)="onFileSelected($event)">
+      <label for="image">Image URL</label>
+      <input type="text" id="image" formControlName="image" placeholder="Paste image URL here">
     </div>
     <button type="submit" class="update-btn" [disabled]="!updatejobsForm.valid">Update</button>
   </form>

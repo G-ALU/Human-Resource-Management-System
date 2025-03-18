@@ -1,26 +1,25 @@
 <div class="dashboard-layout">
   <div class="main-content">
-    <app-navbar3></app-navbar3>
     <div class="stats-container">
       <div class="stat-card">
         <h2>{{ userCount  }}</h2>
-        <p>Attendees</p>
+        <p>Employees</p>
       </div>
       <div class="stat-card">
         <h2>${{ totalRevenue }}</h2>
-        <p>Revenue</p>
+        <p>Amount allocated to employees</p>
       </div>
       <div class="stat-card">
-        <h2>3</h2>
-        <p>Upcoming events</p>
+        <h2>{{ managerCount  }}</h2>
+        <p>H.R managers</p>
       </div>
     </div>
     <div class="main">
-      <div class="chart">
+      <!-- <div class="chart">
         <canvas id="chart"></canvas>
-      </div>
+      </div> -->
 
-      <div class="popular-events">
+      <!-- <div class="popular-events">
         <h3>Most Popular events</h3>
         <table>
           <thead>
@@ -44,8 +43,8 @@
             </tr>
           </tbody>
         </table>
-      </div>
+      </div> -->
     </div>
-    <app-footer2></app-footer2>
+    <app-footer3></app-footer3>
   </div>
 </div>

@@ -18,7 +18,8 @@ import { RevenueService } from '../../services/revenue.service';
   templateUrl: './dashboard.component.html',
   styleUrl: './dashboard.component.css'
 })
-export class DashboardComponent implements AfterViewInit {
+// export class DashboardComponent implements AfterViewInit {
+  export class DashboardComponent {
 
   userCount: number = 0;
   totalRevenue: number = 0;
@@ -29,43 +30,43 @@ export class DashboardComponent implements AfterViewInit {
     this.getTotalRevenue();
   }
 
-  ngAfterViewInit(): void {
-    if (isPlatformBrowser(this.platformId))
-    this.createChart();
-  }
+  // ngAfterViewInit(): void {
+  //   if (isPlatformBrowser(this.platformId))
+  //   this.createChart();
+  // }
 
-  createChart(): void {
-    const ctx = document.getElementById('chart') as HTMLCanvasElement; // Corrected the ID
-    if (ctx) {
-      new Chart(ctx, {
-        type: 'line',
-        data: {
-          labels: ['January', 'February', 'March', 'April', 'May', 'June', 'July'],
-          datasets: [{
-            label: 'Sales',
-            data: [3, 5, 6, 9, 7, 12, 19],
-            backgroundColor: 'rgba(75, 192, 192, 0.2)', // Added color
-            borderColor: 'rgba(75, 192, 192, 1)', // Added border color
-            borderWidth: 1
-          }]
-        },
-        options: {
-          responsive: true,
-          maintainAspectRatio: false,
-          scales: {
-            x: {
-              beginAtZero: true
-            },
-            y: {
-              beginAtZero: true
-            }
-          }
-        }
-      });
-    } else {
-      console.log("canvas error");
-    }
-  }
+  // createChart(): void {
+  //   const ctx = document.getElementById('chart') as HTMLCanvasElement; // Corrected the ID
+  //   if (ctx) {
+  //     new Chart(ctx, {
+  //       type: 'line',
+  //       data: {
+  //         labels: ['January', 'February', 'March', 'April', 'May', 'June', 'July'],
+  //         datasets: [{
+  //           label: 'Sales',
+  //           data: [3, 5, 6, 9, 7, 12, 19],
+  //           backgroundColor: 'rgba(75, 192, 192, 0.2)', // Added color
+  //           borderColor: 'rgba(75, 192, 192, 1)', // Added border color
+  //           borderWidth: 1
+  //         }]
+  //       },
+  //       options: {
+  //         responsive: true,
+  //         maintainAspectRatio: false,
+  //         scales: {
+  //           x: {
+  //             beginAtZero: true
+  //           },
+  //           y: {
+  //             beginAtZero: true
+  //           }
+  //         }
+  //       }
+  //     });
+  //   } else {
+  //     console.log("canvas error");
+  //   }
+  // }
 
   getallusers(): void {
     this.userService.fetchUsers().subscribe(users => {

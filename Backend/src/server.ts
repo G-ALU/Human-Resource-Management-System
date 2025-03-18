@@ -4,7 +4,7 @@ import user_router from './routes/user.routes';
 import event_router from './routes/event.routes';
 import cors from 'cors'
 import booking_router from './routes/booking.routes';
-
+import path from 'path'; // Add this for path handling
 
 
 const app = express();
@@ -28,11 +28,14 @@ app.use((req: Request, res: Response, next: NextFunction) => {
     next();
 });
 
+// Serve static files from an "images" folder
+app.use('/images', express.static(path.join(__dirname, 'images')));
+
 // Middleware
 app.use((req, res, next) => {
-    // console.log('Middleware hit:', req.method, req.url);
-    // console.log('Request URL:', req.url);
-    // console.log('Request Headers:', req.headers);
+    console.log('Middleware hit:', req.method, req.url);
+    console.log('Request URL:', req.url);
+    console.log('Request Headers:', req.headers);
     next();
 });
 

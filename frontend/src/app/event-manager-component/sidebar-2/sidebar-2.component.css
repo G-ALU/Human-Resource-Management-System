@@ -2,6 +2,7 @@
   display: flex;
   width: 100%;
   gap:25px;
+  height: auto;
 }
 
 .body1{
@@ -14,7 +15,7 @@
   background-color: blue;
   color: white;
   width: 200px;
-  height: 100vh;
+  height: auto;
   padding: 20px;
 }
 

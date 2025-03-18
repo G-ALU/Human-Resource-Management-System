@@ -248,3 +248,241 @@ a{
   font-size: 1rem;
   margin-top: 20px;
 }
+
+
+/* Reset default styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f7fa;
+  color: #333;
+}
+
+/* Hero Section */
+.hero {
+  background-image: url('https://images.pexels.com/photos/3184291/pexels-photo-3184291.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1'); /* Professional office image */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 80vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  color: white;
+}
+
+.hero::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.6));
+  z-index: 1;
+}
+
+.content {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+}
+
+h1 {
+  font-size: 3rem;
+  margin-bottom: 20px;
+}
+
+p {
+  font-size: 1.2rem;
+  margin-bottom: 30px;
+}
+
+.btn {
+  background-color: #007bff; /* Professional blue */
+  border: none;
+  padding: 12px 25px;
+  border-radius: 5px;
+  color: white;
+  cursor: pointer;
+  font-size: 1.1rem;
+  transition: background-color 0.3s;
+}
+
+.btn:hover {
+  background-color:aqua;
+}
+
+/* Card Container */
+.card-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  padding: 40px 20px;
+  background-color: #fff;
+}
+
+.event-card {
+  width: 300px;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.event-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.jobs-image {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.event-details {
+  padding: 20px;
+  text-align: center;
+}
+
+.event-details h3 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+  color: #007bff;
+}
+
+.view-button {
+  margin-top: 15px;
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.view-button:hover {
+  background-color: aqua;
+}
+
+/* How It Works */
+.how-it-works {
+  padding: 60px 20px;
+  text-align: center;
+  background-color: white;
+}
+
+.how-it-works h2 {
+  font-size: 2.5rem;
+  margin-bottom: 40px;
+  color: #333;
+}
+
+.steps {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+.step {
+  width: 300px;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.step h2 {
+  font-size: 1.5rem;
+  color: #007bff;
+  margin-bottom: 10px;
+}
+
+/* Newsletter */
+.newsLetter {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 60px 10%;
+  background-color: #007bff;
+  color: white;
+}
+
+.writings h2 {
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+
+.sub {
+  color: white;
+}
+.inputField {
+  padding: 12px 20px;
+  border: none;
+  border-radius: 5px 0 0 5px;
+  outline: none;
+  width: 250px;
+}
+
+.subscribeBtn {
+  padding: 12px 25px;
+  border: none;
+  background-color: #0056b3;
+  color: white;
+  border-radius: 0 5px 5px 0;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.subscribeBtn:hover {
+  background-color: #003d80;
+}
+
+/* Footer */
+.footer {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 40px 20px;
+  background-color: #fff;
+  border-top: 1px solid #ddd;
+  color: #333;
+}
+
+.links p {
+  margin: 10px 0;
+}
+
+.links a {
+  text-decoration: none;
+  color: #007bff;
+}
+
+.links a:hover {
+  text-decoration: underline;
+}
+
+.icons {
+  display: flex;
+  gap: 15px;
+}
+
+.icons i {
+  font-size: 1.5rem;
+  color: #007bff;
+}
+
+.step p{
+  color:#007bff;
+}

@@ -2,9 +2,8 @@ import { RoleSwitchService } from './../../services/switch.service';
 import { Component, OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { RouterLink, RouterOutlet } from '@angular/router';
-import { Footer2Component } from '../../event-manager-component/footer2/footer2.component';
 import { Sidebar3Component } from '../sidebar3/sidebar3.component';
-import { Navbar3Component } from '../navbar3/navbar3.component';
+import { footer3Component } from '../footer3/footer3.component';
 import { ManagerService } from '../../services/manager.service';
 import { CommonModule } from '@angular/common';
 import { ActivatedRoute, Router } from '@angular/router';
@@ -13,7 +12,7 @@ import { ActivatedRoute, Router } from '@angular/router';
 @Component({
   selector: 'app-manager-list',
   standalone: true,
-  imports: [RouterOutlet,Footer2Component, Sidebar3Component,Navbar3Component, RouterLink, CommonModule],
+  imports: [RouterOutlet, footer3Component, Sidebar3Component, RouterLink, CommonModule],
   templateUrl:'./manager-list.component.html',
   styleUrl: './manager-list.component.css'
 })

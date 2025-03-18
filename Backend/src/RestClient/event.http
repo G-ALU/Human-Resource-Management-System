@@ -4,12 +4,12 @@ Content-Type: application/json
 
 
 {
-    "image":"pexels-emma-bauso-1183828-2253842.jpg",
-    "title": "Printer",
-    "description": "Printing papers",
+    "image":"pexels-divinetechygirl-1181524.jpg",
+    "title": "Receptionist",
+    "description": "Directing visitors and receiving calls",
     "location": "Nairobi",
     "status": "Open",
-    "salary":4500.00
+    "salary":6500.00
     
    
 }
@@ -20,12 +20,12 @@ Content-Type: application/json
 
 
 {
-     "image":"https://images.pexels.com/photos/7108325/pexels-photo-7108325.jpeg",
+     "image":"pexels-divinetechygirl-1181524.jpg",
     "title": "Receptionist",
-    "description": "Receiving calls",
+    "description": "Receiving calls and directs incoming visitors",
     "location": "Nairobi",
     "status": "Open",
-    "salary":5500.00
+    "salary":6500.00
 
    
 }

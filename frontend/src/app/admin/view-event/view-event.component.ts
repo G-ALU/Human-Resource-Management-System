@@ -3,14 +3,14 @@ import { Component, OnInit } from '@angular/core';
 import { RouterLink, RouterOutlet } from '@angular/router';
 import { Footer2Component } from '../../event-manager-component/footer2/footer2.component';
 import { Sidebar3Component } from '../sidebar3/sidebar3.component';
-import { Navbar3Component } from '../navbar3/navbar3.component';
+import { footer3Component } from '../footer3/footer3.component';
 import { CommonModule } from '@angular/common';
 import { EventService1 } from '../../services/event.service';
 
 @Component({
   selector: 'app-view-event',
   standalone: true,
-  imports: [RouterOutlet, Footer2Component, Sidebar3Component, Navbar3Component, RouterLink, CommonModule, UpdateEventComponent],
+  imports: [RouterOutlet, footer3Component, Sidebar3Component, RouterLink, CommonModule, UpdateEventComponent],
   templateUrl: './view-event.component.html',
   styleUrl: './view-event.component.css'
 })

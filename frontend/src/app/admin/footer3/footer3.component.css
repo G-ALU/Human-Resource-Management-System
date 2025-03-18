@@ -1,29 +1,29 @@
 /* Navbar styles */
-.navbar {
+/* .navbar {
   background-color: #ffffff;
   color: white;
   padding: 10px;
   display: flex;
   justify-content: flex-end;
   align-items: center;
-}
+} */
 
 /* Navbar right section styles */
-.navbar-right {
+/* .navbar-right {
   display: flex;
   align-items: center;
-}
+} */
 
 /* User profile image styles */
-.profile-image {
+/* .profile-image {
   width: 30px;
   height: 30px;
   border-radius: 50%;
   margin-right: 10px;
-}
+} */
 
 /* Dropdown styles */
-.dropdown {
+/* .dropdown {
   position: relative;
   display: inline-block;
 }
@@ -72,4 +72,26 @@
   display: flex;
   justify-content: center;
   align-items: center;
+} */
+
+/* Footer styles */
+.footer {
+  background-color: #ffffff;
+  padding: 20px 0;
+  text-align: center;
+  width: 100%;
+
+
+}
+
+.footer-content {
+  max-width: 800px;
+  margin: 0 auto;
+  margin-top: 200px;
+  color: #333;
+}
+
+.footer-content p {
+  margin: 10px 0;
+  font-size: 16px;
 }
