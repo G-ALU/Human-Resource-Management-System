@@ -1,6 +1,7 @@
 {
     "dataworkspace.excludedProjects": [
-        "PLANA/PLANA.sqlproj"
+        "PLANA/PLANA.sqlproj",
+        "humanresourcemanagement/humanresourcemanagement.sqlproj"
     ],
     "sqltools.connections": [
         {

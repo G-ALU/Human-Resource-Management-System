@@ -1,11 +1,15 @@
 CREATE TABLE PerformanceRecords (
-    RecordID INT PRIMARY KEY,
-    user_id VARCHAR(255) FOREIGN KEY REFERENCES Users(user_id),
-    TaskCompleted INT,
-    HoursWorked DECIMAL(5,2),
-    Rating FLOAT,
-    DateRecorded DATE
+    record_id VARCHAR(255) PRIMARY KEY,
+    user_id VARCHAR(255),
+    taskCompleted INT,
+    hoursworked INT,
+    CONSTRAINT FK_Perf_User FOREIGN KEY (user_id) REFERENCES Users(user_id)
+   
 );
+
+ALTER TABLE PerformanceRecords ADD username VARCHAR(255) NOT NULL;
+
+DROP TABLE PerformanceRecords
 
 SELECT * FROM PerformanceRecords
 

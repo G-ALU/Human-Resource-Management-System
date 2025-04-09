@@ -4,6 +4,7 @@ import { Sidebar2Component } from '../sidebar-2/sidebar-2.component';
 import { Navbar2Component } from '../navbar2/navbar2.component';
 import { Footer2Component } from '../footer2/footer2.component';
 import { UserService } from '../../services/users.service';
+import { PerformanceanalyticsService } from '../../services/performanceanalytics.service';
 import { HttpClient } from '@angular/common/http';
 import { CommonModule } from '@angular/common';
 import { ActivatedRoute, Router } from '@angular/router';
@@ -17,11 +18,13 @@ import { ActivatedRoute, Router } from '@angular/router';
 })
 export class AttendeeListComponent implements OnInit {
 
+  performanceList: any[] = []; 
   users: any[] = [];
   isLoading = false;
   successMessage: string | null = null;
+  isModalOpen = false;
 
-  constructor(private userService: UserService, private http: HttpClient, private router: Router, private route: ActivatedRoute) {}
+  constructor(private userService: UserService, private performanceService:PerformanceanalyticsService ,private http: HttpClient, private router: Router, private route: ActivatedRoute) {}
 
   // ngOnInit(): void {
   //   this.userService.fetchUsers().subscribe((data: any) => {
@@ -116,6 +119,36 @@ export class AttendeeListComponent implements OnInit {
       );
     }
 
+    openModal() {
+      this.isModalOpen = true;
+    }
+  
+    closeModal() {
+      this.isModalOpen = false;
+    }
+
+    createperformancesummary(event: any): void {
+      event.preventDefault();
+      const formData = new FormData(event.target as HTMLFormElement);
+      const performanceData = {
+        taskCompleted: formData.get('taskCompleted'),
+        hoursworked: formData.get('hoursworked')
+      };
+  
+      this.performanceService.createperformancesummary(performanceData).subscribe({
+        next: (data) => {
+          this.performanceList.push(data.performance); // push to renamed array
+          this.closeModal();
+          this.successMessage = 'Account performance details updated successfully!';
+          this.clearSuccessMessage();
+        },
+        error: (err) => {
+          console.error('Failed to create the performance summary', err);
+          this.successMessage = 'Error updating account performance details account. Please try again.';
+          this.clearSuccessMessage();
+        }
+      });
+    }
     clearSuccessMessage(): void {
       setTimeout(() => {
         this.successMessage = null;

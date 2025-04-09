@@ -29,11 +29,33 @@
               <button class="update-btn" (click)="confirmReactivation(user)">
                 <i class="fas fa-edit"></i> Activate Account
               </button>
+              <button class="update-btn" (click)="openModal()">
+                <i class="fas fa-edit"></i> update metrics
+              </button>
             </td>
           </tr>
         </tbody>
       </table>
     </div>
     <app-footer2></app-footer2>
+
+     <!-- Modal Form -->
+     <div class="modal" *ngIf="isModalOpen">
+      <div class="modal-content">
+        <span class="close-btn" (click)="closeModal()">&times;</span>
+        <form (submit)="createperformancesummary($event)">
+          <div class="form-group">
+            <label for="tasks">Tasks Completed</label>
+            <input type="text" id="tasks" name="tasks" required>
+          </div>
+          <div class="form-group">
+            <label for="description">Hours Worked</label>
+            <textarea id="description" name="description" required></textarea>
+          </div>
+         
+          <button type="submit" class="create-btn">Create Job</button>
+        </form>
+      </div>
+    </div>
   </div>
 </div>

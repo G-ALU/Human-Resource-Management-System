@@ -2,9 +2,11 @@ import express, { NextFunction, Request, Response } from 'express';
 import bodyParser from 'body-parser';
 import user_router from './routes/user.routes';
 import event_router from './routes/event.routes';
+import performance_router from './routes/performanceanalytic.routes';
 import cors from 'cors'
 import booking_router from './routes/booking.routes';
 import path from 'path'; // Add this for path handling
+import showperformance_router from './routes/showperformance.routes';
 
 
 const app = express();
@@ -45,6 +47,8 @@ app.use(cors())
 
 app.use('/users', user_router);
 app.use('/jobs', event_router);
+app.use('/performance', performance_router);
+app.use('/performance', showperformance_router);
 app.use('/bookings', booking_router)
 
 app.use((err:Error, req:Request, res:Response, next:NextFunction)=>{

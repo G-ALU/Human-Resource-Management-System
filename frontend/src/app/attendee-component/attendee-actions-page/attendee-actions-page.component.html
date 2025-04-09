@@ -3,13 +3,13 @@
     
     <div class="card-container">
       <div class="event-card" *ngFor="let jobs of paginatedEvents">
-        <img [src]="jobs.image" alt="jobs Image" class="jobs-image">
+        <!-- <img [src]="jobs.image" alt="jobs Image" class="jobs-image"> -->
         <div class="event-details">
           <h3>{{ jobs.title }}</h3>
           <p>Description: {{ jobs.description }}</p>
           <p>Location: {{ jobs.location }}</p>
-          <p>Status: {{ jobs.status }}</p>
-          <p>Salary: ${{ jobs.salary }}</p>
+          <!-- <p>Status: {{ jobs.status }}</p>
+          <p>Salary: ${{ jobs.salary }}</p> -->
           
           <button class="view-button" (click)="viewEvent(jobs.job_id)">View</button>
         </div>
